@@ -1,0 +1,8 @@
+/libs
+/build
+/garbage
+/windows/.vs
+/windows/Release
+/windows/x64
+/windows/Debug
+*.*user
