@@ -1,4 +1,9 @@
+#include "SDL_cpuinfo.h"
 #include "app.h"
+#include <GL/glew.h>
+#include <cstdio>
+#include <SDL_assert.h>
+#include <stdio.h>
 
 bool init()
 {
@@ -29,7 +34,7 @@ bool init()
 bool load_media()
 {
   bool success = true;
-  img_hello_world = SDL_LoadBMP("../assets/image.bmp");
+  img_hello_world = SDL_LoadBMP("image.bmp");
   if (img_hello_world == NULL)
   {
     printf("Unable to load image %s! SDL Error: %s\n", "image.bmp", SDL_GetError());

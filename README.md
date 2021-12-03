@@ -1,3 +1,8 @@
+# Prerequisites
+- git
+- gcc(clang)
+- SDL2-devel
+
 # Build/Run/Clean
 ```
 chmod +x build.sh
