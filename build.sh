@@ -6,14 +6,14 @@ build_debug() {
     cp assets/image.bmp build/linux/debug
 
     echo ">>> Building app (Debug mode)"
-    $CC \
+    $CXX \
     -g \
     -lGLEW \
     -lGLU \
     -lGL \
     -I/usr/local/include/SDL2/ \
     `sdl2-config --cflags --libs` \
-    src/main.cpp \
+    src/*.cpp \
     -o build/linux/debug/app
 }
 
@@ -23,13 +23,13 @@ build_release() {
     cp assets/image.bmp build/linux/release
 
     echo ">>> Building app (Release mode)"
-    $CC \
+    $CXX \
     -lGLEW \
     -lGLU \
     -lGL \
     -I/usr/local/include/SDL2/ \
     `sdl2-config --cflags --libs` \
-    src/main.cpp \
+    src/*.cpp \
     -o build/linux/release/app
 }
 
