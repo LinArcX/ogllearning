@@ -14,27 +14,39 @@
   #include <SDL_video.h>
   #include <SDL_assert.h>
 #endif
-
 #include <GL/glew.h>
 
+#include <iostream>
+#include <string>
 #include <stdio.h>
+
+enum class GameState {PLAY, EXIT};
 
 class MainGame
 {
+  int p_screenWidth;
+  int p_screenHeight;
+  SDL_Window* p_window = NULL;
+  SDL_Surface* p_screen_surface = NULL;
+  SDL_Surface* p_img_hello_world = NULL;
+  GameState p_game_state;
+
+  void init();
+  void game_loop();
+  void process_input();
+  void load_media();
+  void close();
+
+  template <typename T>
+  void fatal(T t);
+
+  template<typename T, typename... Args>
+  void fatal(T t, Args... args); // recursive variadic function
+  
 public:
-    MainGame();
-    ~MainGame();
+  MainGame();
+  ~MainGame();
 
-    bool init();
-    void close();
-    bool load_media();
-    void run();
-
-private:
-    int screenWidth;
-    int screenHeight;
-    SDL_Window* window = NULL;
-    SDL_Surface* screen_surface = NULL;
-    SDL_Surface* img_hello_world = NULL;
+  void run();
 };
 #endif

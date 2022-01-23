@@ -5,4 +5,5 @@
 /windows/Release
 /windows/x64
 /windows/Debug
+/windows/image.bmp
 *.*user

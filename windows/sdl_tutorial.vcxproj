@@ -139,6 +139,8 @@ copy /Y "$(SolutionDir)..\deps\bin\Release\x86\SDL2.dll" "$(SolutionDir)..\build
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;opengl32.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(SolutionDir)..\build\Windows\Release\x86\$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
     </Link>
     <PostBuildEvent>
       <Command>copy /Y "$(SolutionDir)..\assets\image.bmp" "$(SolutionDir)..\build\Windows\Release\x86\image.bmp"

@@ -2,80 +2,114 @@
 
 MainGame::MainGame()
 {
-    screenWidth = 640;
-    screenHeight = 480;
+  p_window = nullptr;
+  p_screen_surface = nullptr;
+  p_img_hello_world = nullptr;
+  p_screenWidth = 640;
+  p_screenHeight = 480;
+  p_game_state = GameState::PLAY;
 }
 
 MainGame::~MainGame()
 {
-
 }
 
-bool MainGame::init()
+template <typename T>
+void MainGame::fatal(T t) 
 {
-  bool success = true;
+  std::cout << t << std::endl ;
+  std::cout << "Enter any key to quit...";
+  int temp;
+  std::cin >> temp;
+  close();
+}
 
+template<typename T, typename... Args>
+void MainGame::fatal(T t, Args... args) // recursive variadic function
+{
+  std::cout << t <<std::endl ;
+  fatal(args...) ;
+}
+
+void MainGame::init()
+{
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-    printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
-    success = false;
+    fatal("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
   }
   else
   {
-    window = SDL_CreateWindow("SDL Tutorial",
-                                SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-                                screenWidth, screenHeight, SDL_WINDOW_OPENGL);
-    if (window == NULL)
+    p_window = SDL_CreateWindow("SDL Tutorial",
+                                SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+                                p_screenWidth, p_screenHeight, SDL_WINDOW_OPENGL);
+    if (nullptr == p_window)
     {
-      printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
-      success = false;
+      fatal("Window could not be created! SDL_Error: %s\n", SDL_GetError());
     }
     else
     {
-      screen_surface = SDL_GetWindowSurface(window);
+      p_screen_surface = SDL_GetWindowSurface(p_window);
     }
   }
-  return success;
 }
 
-bool MainGame::load_media()
+void MainGame::game_loop()
 {
-  bool success = true;
-  img_hello_world = SDL_LoadBMP("image.bmp");
-  if (img_hello_world == NULL)
-  {
-    printf("Unable to load image %s! SDL Error: %s\n", "image.bmp", SDL_GetError());
-    success = false;
+  while (p_game_state != GameState::EXIT) {
+    process_input();
+    }
+}
+
+void MainGame::process_input()
+{
+  SDL_Event event;
+  while (SDL_PollEvent(&event)) {
+    switch (event.type) {
+      case SDL_QUIT:
+        p_game_state = GameState::EXIT;
+          break;
+      case SDL_MOUSEMOTION:
+        std::cout
+          << "x: " << event.motion.x
+          << " ,y: " << event.motion.y
+          << std::endl;
+          break;
+      default:
+          break;
+    }
   }
-  return success;
+}
+
+void MainGame::load_media()
+{
+  p_img_hello_world = SDL_LoadBMP("image.bmp");
+  if (!p_img_hello_world)
+  {
+    fatal("Unable to load image %s! SDL Error: %s\n", "image.bmp", SDL_GetError());
+  }
 }
 
 void MainGame::run()
 {
-  if (!init()) {
-    printf("Failed to initialize!\n");
-  }
-  else
-  {
-    if (!load_media())
-    {
-      printf("Failed to load media!\n");
-    }
-    else
-    {
-      SDL_BlitSurface(img_hello_world, NULL, screen_surface, NULL);
-      SDL_UpdateWindowSurface(window);
-      SDL_Delay(2000);
-    }
-  }
+  init();
+  game_loop();
+  //if (!load_media())
+  //{
+  //  printf("Failed to load media!\n");
+  //}
+  //else
+  //{
+  //  SDL_BlitSurface(p_img_hello_world, NULL, p_screen_surface, NULL);
+  //  SDL_UpdateWindowSurface(p_window);
+  //  SDL_Delay(2000);
+  //}
   close();
 }
 
 void MainGame::close()
 {
-  SDL_FreeSurface(img_hello_world);
-  img_hello_world = NULL;
-  SDL_DestroyWindow(window);
-  window = NULL;
+  SDL_FreeSurface(p_img_hello_world);
+  p_img_hello_world = NULL;
+  SDL_DestroyWindow(p_window);
+  p_window = NULL;
   SDL_Quit();
 }
-

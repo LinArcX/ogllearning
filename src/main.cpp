@@ -2,8 +2,7 @@
 
 int main(int argc, char* args[])
 {
-    MainGame mainGame;
-    mainGame.run();
-
-    return 0;
+  MainGame mainGame;
+  mainGame.run();
+  return 0;
 }
