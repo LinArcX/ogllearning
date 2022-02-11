@@ -7,3 +7,6 @@
 /windows/Debug
 /windows/image.bmp
 *.*user
+
+/windows/*.hlsl
+/windows/*.hlsl
