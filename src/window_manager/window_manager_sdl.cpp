@@ -11,7 +11,7 @@
 
 WindowManagerSDL::WindowManagerSDL()
 {
-	set_width(APm_width);
+	set_width(APP_width);
 	set_height(APP_HEIGHT);
 	set_app_name(APP_NAME);
 }

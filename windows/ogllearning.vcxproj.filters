@@ -76,7 +76,10 @@
     <ClInclude Include="..\src\extension_loader\extension_loader.hpp">
       <Filter>Header Files\extension_loader</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\extension_loader\extension_loader_glad.hpp">
+	<ClInclude Include="..\src\extension_loader\extension_loader_glad_glfw.hpp">
+      <Filter>Header Files\extension_loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\extension_loader\extension_loader_glad_sdl.hpp">
       <Filter>Header Files\extension_loader</Filter>
     </ClInclude>
     <ClInclude Include="..\src\extension_loader\extension_loader_glew.hpp">
@@ -141,7 +144,10 @@
     <ClCompile Include="..\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\extension_loader\extension_loader_glad.cpp">
+	<ClCompile Include="..\src\extension_loader\extension_loader_glad_glfw.cpp">
+      <Filter>Source Files\extension_loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\extension_loader\extension_loader_glad_sdl.cpp">
       <Filter>Source Files\extension_loader</Filter>
     </ClCompile>
     <ClCompile Include="..\src\extension_loader\extension_loader_glew.cpp">

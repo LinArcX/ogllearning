@@ -4,14 +4,10 @@
 #include "window_manager.hpp"
 #include "../utility/constants.hpp"
 
-#if USE_GLAD == 1
 #include <glad/glad.h>
-#elif USE_GLEW == 1
-#include <GL/glew.h>
-#endif
 #include <GLFW/glfw3.h>
 
-class WindowManagerGLFW : public WindowManager
+class WindowManagerGLFW : public IWindowManager
 {
 public:
 	WindowManagerGLFW();

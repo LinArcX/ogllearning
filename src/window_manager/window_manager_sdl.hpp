@@ -16,7 +16,7 @@
 #include <SDL_assert.h>
 #endif
 
-class WindowManagerSDL : public WindowManager
+class WindowManagerSDL : public IWindowManager
 {
 public:
 	WindowManagerSDL();

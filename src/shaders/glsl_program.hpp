@@ -2,13 +2,7 @@
 #define SHADERS_GLSL_PROGRAM_H
 
 #include <string>
-#include "../utility/constants.hpp"
-
-#if USE_GLAD
 #include <glad/glad.h>
-#elif USE_GLEW
-#include <GL/glew.h>
-#endif
 
 class GLSLProgram
 {

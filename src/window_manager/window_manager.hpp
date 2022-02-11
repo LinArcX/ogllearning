@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-class WindowManager
+class IWindowManager
 {
 public:
 	virtual void init() = 0;

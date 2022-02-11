@@ -3,6 +3,7 @@
 #include <string>
 #include <stdio.h>
 #include <iostream>
+#include <memory>
 
 #include "extension_loader/extension_loader.hpp"
 #include "window_manager/window_manager.hpp"
@@ -13,22 +14,22 @@
 class Game
 {
 public:
-	Game();
+	Game(IExtensionLoader& extension_loader, IWindowManager& window_manager);
 	~Game();
 	void run();
 
 private:
 	void init();
 	void init_shaders();
-	void handle_events();
 	void draw();
 	void loop();
+	void print_version();
 
 private:
 	float m_time = 0;
 	Sprite m_sprite;
 	GLSLProgram m_color_program;
-	WindowManager* m_window_manager = NULL;
-	ExtensionLoader* m_extension_loader = NULL;
+	IExtensionLoader* m_extension_loader = nullptr;
+	IWindowManager* m_window_manager = nullptr;
 };
 #endif // GAME_H

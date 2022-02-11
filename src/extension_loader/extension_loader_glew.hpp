@@ -3,10 +3,9 @@
 
 #include "extension_loader.hpp"
 
-class ExtensionLoaderGLEW : public ExtensionLoader
+class ExtensionLoaderGLEW : public IExtensionLoader
 {
 public:
 	virtual void init() override;
 };
-
 #endif // EXTENSION_LOADER_GLEW_H

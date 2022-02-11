@@ -1,13 +1,6 @@
 #ifndef INGREDIENTS_SPRITE_H
 #define INGREDIENTS_SPRITE_H
-
-#include "../utility/constants.hpp"
-
-#if USE_GLAD == 1
-	#include <glad/glad.h>
-#elif USE_GLEW == 1
-	#include <GL/glew.h>
-#endif
+#include <glad/glad.h>
 
 class Sprite
 {

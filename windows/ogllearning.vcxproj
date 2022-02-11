@@ -237,7 +237,8 @@ copy /Y "$(SolutionDir)..\src\shaders\color_shading_fragment.hlsl" "$(SolutionDi
   <ItemGroup>
     <ClInclude Include="..\src\game.hpp" />
     <ClInclude Include="..\src\extension_loader\extension_loader.hpp" />
-    <ClInclude Include="..\src\extension_loader\extension_loader_glad.hpp" />
+	<ClInclude Include="..\src\extension_loader\extension_loader_glad_glfw.hpp" />
+    <ClInclude Include="..\src\extension_loader\extension_loader_glad_sdl.hpp" />
     <ClInclude Include="..\src\extension_loader\extension_loader_glew.hpp" />
     <ClInclude Include="..\src\ingredients\color.h" />
     <ClInclude Include="..\src\ingredients\position.h" />
@@ -260,7 +261,8 @@ copy /Y "$(SolutionDir)..\src\shaders\color_shading_fragment.hlsl" "$(SolutionDi
     <ClCompile Include="..\deps\src\glad.c" />
     <ClCompile Include="..\src\game.cpp" />
     <ClCompile Include="..\src\main.cpp" />
-    <ClCompile Include="..\src\extension_loader\extension_loader_glad.cpp" />
+    <ClCompile Include="..\src\extension_loader\extension_loader_glad_glfw.cpp" />
+	<ClCompile Include="..\src\extension_loader\extension_loader_glad_sdl.cpp" />
     <ClCompile Include="..\src\extension_loader\extension_loader_glew.cpp" />
     <ClCompile Include="..\src\ingredients\sprite.cpp" />
     <ClCompile Include="..\src\shaders\glsl_program.cpp" />

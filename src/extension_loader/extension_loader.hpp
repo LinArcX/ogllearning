@@ -1,7 +1,7 @@
 #ifndef EXTENSION_LOADER_H
 #define EXTENSION_LOADER_H
 
-class ExtensionLoader
+class IExtensionLoader
 {
 public:
 	virtual void init() = 0;

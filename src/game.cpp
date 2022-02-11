@@ -5,31 +5,11 @@
 #include "state_manager/app_state_exit.hpp"
 #include "state_manager/app_state_running.hpp"
 
-#if USE_GLAD
-#include "extension_loader/extension_loader_glad.hpp"
-#elif USE_GLEW
-#include "extension_loader/extension_loader_glew.hpp"
-#endif
-
-#if USE_GLFW
-#include "window_manager/window_manager_glfw.hpp"
-#elif USE_SDL
-#include "window_manager/window_manager_sdl.hpp"
-#endif
-
-Game::Game()
+Game::Game(IExtensionLoader& extension_loader, IWindowManager& window_manager)
 {
-#if USE_GLAD
-	m_extension_loader = new ExtensionLoaderGLAD();
-#elif USE_GLEW
-	m_extension_loader = new ExtensionLoaderGLEW();
-#endif
-
-#if USE_GLFW
-	m_window_manager = new WindowManagerGLFW();
-#elif USE_SDL
-	m_window_manager = new WindowManagerSDL();
-#endif
+	m_extension_loader = &extension_loader;
+	m_window_manager = &window_manager;
+	Context::instance()->setState(AppStateRunning::instance());
 }
 
 Game::~Game()
@@ -43,22 +23,17 @@ void Game::init()
 	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 	init_shaders();
 	m_sprite.init(-1.0f, -1.0f, 1.5f, 1.5f);
+	print_version();
 }
 
 void Game::init_shaders()
 {
-	m_color_program.compile_shaders("color_shading_vertex.hlsl",
-		"color_shading_fragment.hlsl");
+	m_color_program.compile_shaders("color_shading_vertex.hlsl", "color_shading_fragment.hlsl");
 
 	m_color_program.add_attribute("vertex_position");
 	m_color_program.add_attribute("vertext_color");
 
 	m_color_program.link_shaders();
-}
-
-void Game::handle_events()
-{
-	m_window_manager->handle_events();
 }
 
 void Game::draw()
@@ -86,9 +61,16 @@ void Game::loop()
 	}
 }
 
+void Game::print_version()
+{
+	std::cout << "" << "OpenGL Vendor: " << glGetString(GL_VENDOR) << std::endl;
+	std::cout << "" << "OpenGL Renderer: " << glGetString(GL_RENDERER) << std::endl;
+	std::cout << "" << "OpenGL Version: " << glGetString(GL_VERSION) << std::endl;
+	std::cout << "" << "OpenGL Shading Language Version: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
+}
+
 void Game::run()
 {
-	Context::instance()->setState(AppStateRunning::instance());
 	init();
 	loop();
 	m_window_manager->release_resources();
