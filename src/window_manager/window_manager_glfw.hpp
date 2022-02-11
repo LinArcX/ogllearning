@@ -2,8 +2,6 @@
 #define WINDOW_MANAGER_GLFW_H
 
 #include "window_manager.hpp"
-#include "../utility/constants.hpp"
-
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
@@ -12,7 +10,6 @@ class WindowManagerGLFW : public IWindowManager
 public:
 	WindowManagerGLFW();
 	~WindowManagerGLFW();
-
 	virtual void init() override;
 	virtual void create_window() override;
 	virtual void handle_events() override;

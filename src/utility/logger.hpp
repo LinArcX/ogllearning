@@ -1,10 +1,7 @@
 #ifndef UTILITY_LOGGER_H
 #define UTILITY_LOGGER_H
-
 #include <mutex>
 #include <atomic>
-#include <cstdlib>
-#include <stdio.h>
 #include <iostream>
 #include "../window_manager/window_manager.hpp"
 
@@ -13,6 +10,7 @@ class Logger
 public:
 	~Logger();
 	static Logger* instance();
+	void set_window_manager(IWindowManager& window_manager);
 
 	template <typename T>
 	void fatal_error(T t)
@@ -28,9 +26,7 @@ public:
 	{
 		std::cout << t << std::endl;
 		fatal_error(args...);
-
-		//WindowManager* m_window_manager = new WindowManagerSDL();
-		//m_window_manager->release_resources();
+		m_window_manager->release_resources();
 		exit(-1);
 	}
 
@@ -38,6 +34,6 @@ private:
 	Logger();
 	static std::recursive_mutex m_mutex;
 	static std::atomic<Logger*> m_logger;
+  IWindowManager* m_window_manager = nullptr;
 };
-
 #endif //UTILITY_LOGGER_H

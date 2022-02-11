@@ -1,10 +1,11 @@
 #include "game.hpp"
-
 #include "extension_loader/extension_loader_glad_glfw.hpp"
 #include "extension_loader/extension_loader_glad_sdl.hpp"
 
 #include "window_manager/window_manager_glfw.hpp"
 #include "window_manager/window_manager_sdl.hpp"
+
+#include "utility/logger.hpp"
 
 int main(int argc, char* args[])
 {
@@ -13,6 +14,8 @@ int main(int argc, char* args[])
 
 	//WindowManagerGLFW window_manager;
 	WindowManagerSDL window_manager;
+
+	Logger::instance()->set_window_manager(window_manager);
 
 	Game game(extension_loader, window_manager);
 	game.run();

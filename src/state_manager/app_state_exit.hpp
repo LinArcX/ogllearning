@@ -1,6 +1,5 @@
 #pragma once
 #include "State.hpp"
-
 #include <mutex>
 #include <atomic>
 
@@ -8,7 +7,6 @@ class AppStateExit : public State {
 public:
 	~AppStateExit() {}
 	static AppStateExit* instance();
-
 	void action();
 
 private:

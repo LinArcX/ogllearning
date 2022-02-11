@@ -28,3 +28,8 @@ Logger* Logger::instance()
 	}
 	return object;
 }
+
+void Logger::set_window_manager(IWindowManager& window_manager)
+{
+	m_window_manager = &window_manager;
+}
