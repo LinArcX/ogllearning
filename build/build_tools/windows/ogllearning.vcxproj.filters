@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="documents">
+      <UniqueIdentifier>{c5e36117-a929-4dd7-a3e7-74453c6c8c3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules">
+      <UniqueIdentifier>{0bf001a7-df31-4b98-8e7c-dfc4a5cad7cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules\io_manager">
+      <UniqueIdentifier>{f2a8cda7-c1d2-4a3f-bb70-585a50e7df39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules\logger_manager">
+      <UniqueIdentifier>{afdf4349-b534-4c25-b9b1-f82039131874}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules\utility">
+      <UniqueIdentifier>{47b317dd-cef7-484a-80fb-1fca8700c418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules\state_manager">
+      <UniqueIdentifier>{f92e4dc4-8aa6-4351-80cb-dd8e81b69f34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules\game_manager">
+      <UniqueIdentifier>{634dac67-f020-473b-bc80-f487f558d955}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules\game_manager\opengl">
+      <UniqueIdentifier>{cd6964ca-415c-4f87-8faa-82eab99f8a19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules\game_manager\opengl\extension_loader">
+      <UniqueIdentifier>{3ae496ee-39ef-4f6f-a165-eed286e306e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules\game_manager\opengl\ingredients">
+      <UniqueIdentifier>{19c25d23-fa02-447c-b00c-6af24be3a54b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules\game_manager\opengl\shaders">
+      <UniqueIdentifier>{786b4168-45f4-4f7a-9ecd-431eb0d26509}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules\game_manager\opengl\window_manager">
+      <UniqueIdentifier>{bac085c5-316c-465e-b677-1ff56510cac2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules\config_manager">
+      <UniqueIdentifier>{920a3cbd-0e60-472b-8fa8-1c4ce68710ab}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\coding_style.md">
+      <Filter>documents</Filter>
+    </None>
+    <None Include="..\..\..\license">
+      <Filter>documents</Filter>
+    </None>
+    <None Include="..\..\..\readme.md">
+      <Filter>documents</Filter>
+    </None>
+    <None Include="..\..\..\todo.md">
+      <Filter>documents</Filter>
+    </None>
+    <None Include="..\..\..\.gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\sources\modules\config_manager\config_manager.hpp">
+      <Filter>modules\config_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\config_manager\config_manager_provider.hpp">
+      <Filter>modules\config_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\config_manager\config_manager_pc.hpp">
+      <Filter>modules\config_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\io_manager\io_manager.hpp">
+      <Filter>modules\io_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\logger_manager\logger_manager.hpp">
+      <Filter>modules\logger_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\logger_manager\logger_manager_provider.hpp">
+      <Filter>modules\logger_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\logger_manager\logger_manager_console.hpp">
+      <Filter>modules\logger_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\game_manager\opengl\extension_loader\extension_loader.hpp">
+      <Filter>modules\game_manager\opengl\extension_loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\game_manager\opengl\extension_loader\extension_loader_glad_glfw.hpp">
+      <Filter>modules\game_manager\opengl\extension_loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\game_manager\opengl\extension_loader\extension_loader_glad_sdl.hpp">
+      <Filter>modules\game_manager\opengl\extension_loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\game_manager\opengl\extension_loader\extension_loader_glew.hpp">
+      <Filter>modules\game_manager\opengl\extension_loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\game_manager\opengl\ingredients\color.h">
+      <Filter>modules\game_manager\opengl\ingredients</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\game_manager\opengl\ingredients\position.h">
+      <Filter>modules\game_manager\opengl\ingredients</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\game_manager\opengl\ingredients\sprite.hpp">
+      <Filter>modules\game_manager\opengl\ingredients</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\game_manager\opengl\ingredients\vertex.hpp">
+      <Filter>modules\game_manager\opengl\ingredients</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\game_manager\opengl\shaders\glsl_program.hpp">
+      <Filter>modules\game_manager\opengl\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\game_manager\opengl\window_manager\window_manager.hpp">
+      <Filter>modules\game_manager\opengl\window_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\game_manager\opengl\window_manager\window_manager_glfw.hpp">
+      <Filter>modules\game_manager\opengl\window_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\game_manager\opengl\window_manager\window_manager_sdl.hpp">
+      <Filter>modules\game_manager\opengl\window_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\game_manager\game_manager.hpp">
+      <Filter>modules\game_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\game_manager\opengl\game_manager_opengl.hpp">
+      <Filter>modules\game_manager\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\utility\type_utility.hpp">
+      <Filter>modules\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\state_manager\app_state_exit.hpp">
+      <Filter>modules\state_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\state_manager\app_state_running.hpp">
+      <Filter>modules\state_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\state_manager\context.hpp">
+      <Filter>modules\state_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sources\modules\state_manager\state.hpp">
+      <Filter>modules\state_manager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\sources\modules\game_manager\opengl\extension_loader\extension_loader_glad_glfw.cpp">
+      <Filter>modules\game_manager\opengl\extension_loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\modules\game_manager\opengl\extension_loader\extension_loader_glad_sdl.cpp">
+      <Filter>modules\game_manager\opengl\extension_loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\modules\game_manager\opengl\extension_loader\extension_loader_glew.cpp">
+      <Filter>modules\game_manager\opengl\extension_loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\modules\game_manager\opengl\ingredients\sprite.cpp">
+      <Filter>modules\game_manager\opengl\ingredients</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\modules\game_manager\opengl\shaders\glsl_program.cpp">
+      <Filter>modules\game_manager\opengl\shaders</Filter>
+    </ClCompile>
+    <None Include="..\..\..\sources\modules\game_manager\opengl\shaders\color_shading_fragment.hlsl">
+      <Filter>modules\game_manager\opengl\shaders</Filter>
+    </None>
+    <None Include="..\..\..\sources\modules\game_manager\opengl\shaders\color_shading_vertex.hlsl">
+      <Filter>modules\game_manager\opengl\shaders</Filter>
+    </None>
+    <ClCompile Include="..\..\..\sources\modules\game_manager\opengl\window_manager\window_manager_glfw.cpp">
+      <Filter>modules\game_manager\opengl\window_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\modules\game_manager\opengl\window_manager\window_manager_sdl.cpp">
+      <Filter>modules\game_manager\opengl\window_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\modules\state_manager\app_state_exit.cpp">
+      <Filter>modules\state_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\modules\state_manager\app_state_running.cpp">
+      <Filter>modules\state_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\modules\state_manager\context.cpp">
+      <Filter>modules\state_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\modules\utility\type_utility.cpp">
+      <Filter>modules\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\modules\io_manager\io_manager.cpp">
+      <Filter>modules\io_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\modules\logger_manager\logger_manager_console.cpp">
+      <Filter>modules\logger_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\modules\game_manager\opengl\game_manager_opengl.cpp">
+      <Filter>modules\game_manager\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\dependencies\src\glad.c" />
+    <ClCompile Include="..\..\..\sources\main.cpp" />
+  </ItemGroup>
+</Project>
