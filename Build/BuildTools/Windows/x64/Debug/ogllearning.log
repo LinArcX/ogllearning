@@ -1,0 +1,32 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1091,5): warning MSB8027: Two or more files with the name of Glfw.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are ..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glad\Glfw\Glfw.cpp, ..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Window\Glfw\Glfw.cpp.
+  glad.c
+  main.cpp
+  Input.cpp
+  Output.cpp
+  Console.cpp
+  Context.cpp
+  Exit.cpp
+  Running.cpp
+  LifeCycle.cpp
+  Glfw.cpp
+  GladSdl.cpp
+  Glew.cpp
+  Sprite.cpp
+  Glsl.cpp
+  Glfw.cpp
+  Sdl.cpp
+  Type.cpp
+  Generating Code...
+D:\workspace\c++\projects\ogllearning\Sources\Modules\Input\Input.cpp(28): warning C4715: 'ogl::input::Input::read<std::vector<char,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >': not all control paths return a value
+x64\Debug\Glfw.obj : warning LNK4042: object specified more than once; extras ignored
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  ogllearning.vcxproj -> D:\workspace\c++\projects\ogllearning\Build\Output\Windows\Debug\X64\ogllearning.exe
+  copy files to Output directory.
+          1 file(s) copied.
+          1 file(s) copied.
+          1 file(s) copied.
+          1 file(s) copied.
+          1 file(s) copied.
+          1 file(s) copied.
+          1 file(s) copied.
+          1 file(s) copied.

@@ -1,3 +1,0 @@
-- [] create base class for loggings.
-- [] add log4cplus library.
-- [] use factory pattern to create all dependencies of software.

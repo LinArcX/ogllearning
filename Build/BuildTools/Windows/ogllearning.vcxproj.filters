@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Modules">
+      <UniqueIdentifier>{0bf001a7-df31-4b98-8e7c-dfc4a5cad7cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Configurations">
+      <UniqueIdentifier>{920a3cbd-0e60-472b-8fa8-1c4ce68710ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\UserInterface">
+      <UniqueIdentifier>{624fe36b-9013-4ec2-9da1-8eac10b99462}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Documents">
+      <UniqueIdentifier>{c5e36117-a929-4dd7-a3e7-74453c6c8c3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Logger">
+      <UniqueIdentifier>{afdf4349-b534-4c25-b9b1-f82039131874}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\UserInterface\Graphical">
+      <UniqueIdentifier>{bf79ee09-5445-45cc-941a-f4852453aee7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\UserInterface\Graphical\Opengl">
+      <UniqueIdentifier>{cd6964ca-415c-4f87-8faa-82eab99f8a19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\UserInterface\Graphical\Opengl\ExtensionLoader">
+      <UniqueIdentifier>{3ae496ee-39ef-4f6f-a165-eed286e306e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\UserInterface\Graphical\Opengl\Ingredients">
+      <UniqueIdentifier>{19c25d23-fa02-447c-b00c-6af24be3a54b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\UserInterface\Graphical\Opengl\Shaders">
+      <UniqueIdentifier>{786b4168-45f4-4f7a-9ecd-431eb0d26509}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\UserInterface\Graphical\Opengl\Window">
+      <UniqueIdentifier>{bac085c5-316c-465e-b677-1ff56510cac2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\UserInterface\Terminal">
+      <UniqueIdentifier>{bc1c3d81-2709-4711-995b-647e9d74e9ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\State">
+      <UniqueIdentifier>{f92e4dc4-8aa6-4351-80cb-dd8e81b69f34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\State\Application">
+      <UniqueIdentifier>{19b7077b-b89c-42be-b0e6-9fd7f50902e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Utility">
+      <UniqueIdentifier>{47b317dd-cef7-484a-80fb-1fca8700c418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\UserInterface\Graphical\Opengl\Program">
+      <UniqueIdentifier>{90f9e70f-fdaf-4f09-893f-32a631d9acd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Logger\Console">
+      <UniqueIdentifier>{b222fcdb-b3c4-4562-ad88-02922668a610}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Input">
+      <UniqueIdentifier>{f2a8cda7-c1d2-4a3f-bb70-585a50e7df39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Output">
+      <UniqueIdentifier>{b45fb609-3fd8-48ae-ae73-004a7bd025e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glad">
+      <UniqueIdentifier>{9e454637-3b4b-4109-bb6f-c8027d9bd4f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glad\Glfw">
+      <UniqueIdentifier>{6aa3cbf6-a502-4023-8e30-13cb50fc49ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glad\Sdl">
+      <UniqueIdentifier>{7b3584ec-1e87-4717-934c-e2784c90da35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glew">
+      <UniqueIdentifier>{e01e5b03-51e8-4469-9571-1d2211acc8e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\UserInterface\Graphical\Opengl\Window\Glfw">
+      <UniqueIdentifier>{96af16ea-4080-45c5-90c0-fd382da66233}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\UserInterface\Graphical\Opengl\Window\Sdl">
+      <UniqueIdentifier>{1515a396-232c-41e1-93f8-726cbeab4958}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\CodingStyle.md">
+      <Filter>Documents</Filter>
+    </None>
+    <None Include="..\..\..\License">
+      <Filter>Documents</Filter>
+    </None>
+    <None Include="..\..\..\ReadMe.md">
+      <Filter>Documents</Filter>
+    </None>
+    <None Include="..\..\..\ToDo.md">
+      <Filter>Documents</Filter>
+    </None>
+    <None Include="..\..\..\.gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Sources\Modules\Configurations\Configurations.hpp">
+      <Filter>Modules\Configurations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\Configurations\Provider.hpp">
+      <Filter>Modules\Configurations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\Configurations\Pc.hpp">
+      <Filter>Modules\Configurations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\Input\Input.hpp">
+      <Filter>Modules\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\Logger\Logger.hpp">
+      <Filter>Modules\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\Logger\Provider.hpp">
+      <Filter>Modules\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\Logger\Console\Console.hpp">
+      <Filter>Modules\Logger\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\State\Context.hpp">
+      <Filter>Modules\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\State\State.hpp">
+      <Filter>Modules\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\State\Application\Exit.hpp">
+      <Filter>Modules\State\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\State\Application\Running.hpp">
+      <Filter>Modules\State\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\LifeCycle.hpp">
+      <Filter>Modules\UserInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Window.hpp">
+      <Filter>Modules\UserInterface\Graphical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\LifeCycle.hpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\ExtensionLoader\ExtensionLoader.hpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl\ExtensionLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Ingredients\Color.h">
+      <Filter>Modules\UserInterface\Graphical\Opengl\Ingredients</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Ingredients\Position.h">
+      <Filter>Modules\UserInterface\Graphical\Opengl\Ingredients</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Ingredients\Sprite.hpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl\Ingredients</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Ingredients\Vertex.hpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl\Ingredients</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Program\Glsl.hpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl\Program</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\Utility\Type.hpp">
+      <Filter>Modules\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\Output\Output.hpp">
+      <Filter>Modules\Output</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glad\Glfw\Glfw.hpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glad\Glfw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glad\Sdl\GladSdl.hpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glad\Sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glew\Glew.hpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glew</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Window\Glfw\Glfw.hpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl\Window\Glfw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Window\Sdl\Sdl.hpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl\Window\Sdl</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Dependencies\src\glad.c" />
+    <ClCompile Include="..\..\..\Sources\main.cpp" />
+    <ClCompile Include="..\..\..\Sources\Modules\Input\Input.cpp">
+      <Filter>Modules\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Sources\Modules\Logger\Console\Console.cpp">
+      <Filter>Modules\Logger\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Sources\Modules\State\Context.cpp">
+      <Filter>Modules\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Sources\Modules\State\Application\Exit.cpp">
+      <Filter>Modules\State\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Sources\Modules\State\Application\Running.cpp">
+      <Filter>Modules\State\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\LifeCycle.cpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Ingredients\Sprite.cpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl\Ingredients</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Program\Glsl.cpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl\Program</Filter>
+    </ClCompile>
+    <None Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorFragment.hlsl">
+      <Filter>Modules\UserInterface\Graphical\Opengl\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorVertex.hlsl">
+      <Filter>Modules\UserInterface\Graphical\Opengl\Shaders</Filter>
+    </None>
+    <ClCompile Include="..\..\..\Sources\Modules\Utility\Type.cpp">
+      <Filter>Modules\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Sources\Modules\Output\Output.cpp">
+      <Filter>Modules\Output</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glad\Glfw\Glfw.cpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glad\Glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glad\Sdl\GladSdl.cpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glad\Sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glew\Glew.cpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glew</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Window\Glfw\Glfw.cpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl\Window\Glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Window\Sdl\Sdl.cpp">
+      <Filter>Modules\UserInterface\Graphical\Opengl\Window\Sdl</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

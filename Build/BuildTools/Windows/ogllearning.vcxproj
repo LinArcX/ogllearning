@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{cee9d64e-0077-4fd9-876f-16ceb6fb85a5}</ProjectGuid>
+    <RootNamespace>ogllearning</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)..\..\..\Dependencies\include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\..\..\Dependencies\lib\release\x86\;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\..\..\Build\Output\Windows\Debug\X86\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)..\..\..\Dependencies\include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\..\..\Dependencies\lib\release\x86\;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\..\..\Build\Output\Windows\Release\X86\</OutDir>
+    <ExtensionsToDeleteOnClean>$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)..\..\..\Dependencies\include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\..\..\Dependencies\lib\release\x64\;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\..\..\Build\Output\Windows\Debug\X64\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)..\..\..\Dependencies\include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\..\..\Dependencies\lib\release\x64\;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\..\..\Build\Output\Windows\Release\X64\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32.lib;glu32.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)..\..\..\Build\Output\Windows\Debug\X86\$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(SolutionDir)..\..\..\Assets\Images\image.bmp" "$(SolutionDir)..\..\..\Build\Output\Windows\Debug\X86\image.bmp"
+copy /Y "$(SolutionDir)..\..\..\Assets\Images\image.bmp" "$(SolutionDir)"
+copy /Y "$(SolutionDir)..\..\..\Dependencies\bin\Release\X86\glew32.dll" "$(SolutionDir)..\..\..\Build\Output\Windows\Debug\X86\glew32.dll"
+copy /Y "$(SolutionDir)..\..\..\Dependencies\bin\Release\X86\SDL2.dll" "$(SolutionDir)..\..\..\Build\Output\Windows\Debug\X86\SDL2.dll"
+copy /Y "$(SolutionDir)..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorVertex.hlsl" "$(SolutionDir)"
+copy /Y "$(SolutionDir)..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorFragment.hlsl" "$(SolutionDir)"
+copy /Y "$(SolutionDir)..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorVertex.hlsl" "$(SolutionDir)..\..\..\Build\Output\Windows\Debug\X86\ColorVertex.hlsl"
+copy /Y "$(SolutionDir)..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorFragment.hlsl" "$(SolutionDir)..\..\..\Build\Output\Windows\Debug\X86\ColorFragment.hlsl"
+	  </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>copy files to Output directory.</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glfw3.lib;glew32.lib;glu32.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)..\..\..\Build\Output\Windows\Release\X86\$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(SolutionDir)..\..\..\Assets\Images\image.bmp" "$(SolutionDir)..\..\..\Build\Output\Windows\Release\X86\image.bmp"
+copy /Y "$(SolutionDir)..\..\..\Assets\Images\image.bmp" "$(SolutionDir)"
+copy /Y "$(SolutionDir)..\..\..\Dependencies\bin\Release\X86\glew32.dll" "$(SolutionDir)..\..\..\Build\Output\Windows\Release\X86\glew32.dll"
+copy /Y "$(SolutionDir)..\..\..\Dependencies\bin\Release\X86\SDL2.dll" "$(SolutionDir)..\..\..\Build\Output\Windows\Release\X86\SDL2.dll"
+copy /Y "$(SolutionDir)..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorVertex.hlsl" "$(SolutionDir)"
+copy /Y "$(SolutionDir)..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorFragment.hlsl" "$(SolutionDir)"
+copy /Y "$(SolutionDir)..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorVertex.hlsl" "$(SolutionDir)..\..\..\Build\Output\Windows\Release\X86\ColorVertex.hlsl"
+copy /Y "$(SolutionDir)..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorFragment.hlsl" "$(SolutionDir)..\..\..\Build\Output\Windows\Release\X86\ColorFragment.hlsl"
+	  </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>copy files to Output directory.</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glfw3.lib;glew32.lib;glu32.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)..\..\..\Build\Output\Windows\Debug\X64\$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(SolutionDir)..\..\..\Assets\Images\image.bmp" "$(SolutionDir)..\..\..\Build\Output\Windows\Debug\X64\image.bmp"
+copy /Y "$(SolutionDir)..\..\..\Assets\Images\image.bmp" "$(SolutionDir)"
+copy /Y "$(SolutionDir)..\..\..\Dependencies\bin\Release\X64\glew32.dll" "$(SolutionDir)..\..\..\Build\Output\Windows\Debug\X64\glew32.dll"
+copy /Y "$(SolutionDir)..\..\..\Dependencies\bin\Release\X64\SDL2.dll" "$(SolutionDir)..\..\..\Build\Output\Windows\Debug\X64\SDL2.dll"
+copy /Y "$(SolutionDir)..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorVertex.hlsl" "$(SolutionDir)"
+copy /Y "$(SolutionDir)..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorFragment.hlsl" "$(SolutionDir)"
+copy /Y "$(SolutionDir)..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorVertex.hlsl" "$(SolutionDir)..\..\..\Build\Output\Windows\Debug\X64\ColorVertex.hlsl"
+copy /Y "$(SolutionDir)..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorFragment.hlsl" "$(SolutionDir)..\..\..\Build\Output\Windows\Debug\X64\ColorFragment.hlsl"
+	  </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>copy files to Output directory.</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glfw3.lib;glew32.lib;glu32.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)..\..\..\Build\Output\Windows\Release\X64\$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(SolutionDir)..\..\..\Assets\Images\image.bmp" "$(SolutionDir)..\..\..\Build\Output\Windows\Release\X64\image.bmp"
+copy /Y "$(SolutionDir)..\..\..\Assets\Images\image.bmp" "$(SolutionDir)"
+copy /Y "$(SolutionDir)..\..\..\Dependencies\bin\Release\X64\glew32.dll" "$(SolutionDir)..\..\..\Build\Output\Windows\Release\X64\glew32.dll"
+copy /Y "$(SolutionDir)..\..\..\Dependencies\bin\Release\X64\SDL2.dll" "$(SolutionDir)..\..\..\Build\Output\Windows\Release\X64\SDL2.dll"
+copy /Y "$(SolutionDir)..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorVertex.hlsl" "$(SolutionDir)"
+copy /Y "$(SolutionDir)..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorFragment.hlsl" "$(SolutionDir)"
+copy /Y "$(SolutionDir)..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorVertex.hlsl" "$(SolutionDir)..\..\..\Build\Output\Windows\Release\X64\ColorVertex.hlsl"
+copy /Y "$(SolutionDir)..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorFragment.hlsl" "$(SolutionDir)..\..\..\Build\Output\Windows\Release\X64\ColorFragment.hlsl"
+	  </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>copy files to Output directory.</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\..\..\.gitignore" />
+    <None Include="..\..\..\CodingStyle.md" />
+    <None Include="..\..\..\License" />
+    <None Include="..\..\..\ReadMe.md" />
+    <None Include="..\..\..\ToDo.md" />
+    <None Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorVertex.hlsl" />
+    <None Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Shaders\ColorFragment.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Sources\Modules\Configurations\Configurations.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\Configurations\Provider.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\Configurations\Pc.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\Input\Input.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\Output\Output.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\Logger\Logger.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\Logger\Provider.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\Logger\Console\Console.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\State\Context.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\State\State.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\State\Application\Exit.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\State\Application\Running.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\LifeCycle.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Window.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\LifeCycle.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\ExtensionLoader\ExtensionLoader.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glad\Glfw\Glfw.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glad\Sdl\GladSdl.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glew\Glew.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Ingredients\Color.h" />
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Ingredients\Position.h" />
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Ingredients\Sprite.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Ingredients\Vertex.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Program\Glsl.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Window\Glfw\Glfw.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Window\Sdl\Sdl.hpp" />
+    <ClInclude Include="..\..\..\Sources\Modules\Utility\Type.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Dependencies\src\glad.c" />
+    <ClCompile Include="..\..\..\Sources\main.cpp" />
+    <ClCompile Include="..\..\..\Sources\Modules\Input\Input.cpp" />
+    <ClCompile Include="..\..\..\Sources\Modules\Output\Output.cpp" />
+    <ClCompile Include="..\..\..\Sources\Modules\Logger\Console\Console.cpp" />
+    <ClCompile Include="..\..\..\Sources\Modules\State\Context.cpp" />
+    <ClCompile Include="..\..\..\Sources\Modules\State\Application\Exit.cpp" />
+    <ClCompile Include="..\..\..\Sources\Modules\State\Application\Running.cpp" />
+    <ClCompile Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\LifeCycle.cpp" />
+    <ClCompile Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glad\Glfw\Glfw.cpp" />
+    <ClCompile Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glad\Sdl\GladSdl.cpp" />
+    <ClCompile Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\ExtensionLoader\Glew\Glew.cpp" />
+    <ClCompile Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Ingredients\Sprite.cpp" />
+    <ClCompile Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Program\Glsl.cpp" />
+    <ClCompile Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Window\Glfw\Glfw.cpp" />
+    <ClCompile Include="..\..\..\Sources\Modules\UserInterface\Graphical\Opengl\Window\Sdl\Sdl.cpp" />
+    <ClCompile Include="..\..\..\Sources\Modules\Utility\Type.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <Target Name="BeforeClean">
+    <Message Text="Deleting Output files..." Importance="high" />
+  </Target>
+</Project>

@@ -1,57 +1,61 @@
-#include "modules/config_manager/config_manager_provider.hpp"
-#include "modules/config_manager/config_manager_pc.hpp"
+#include "modules/Configurations/Provider.hpp"
+#include "modules/Configurations/Pc.hpp"
 
-#include "modules/logger_manager/logger_manager_provider.hpp"
-#include "modules/logger_manager/logger_manager_console.hpp"
+#include "modules/Logger/Provider.hpp"
+#include "modules/Logger/Console/Console.hpp"
 
-#include "modules/game_manager/game_manager.hpp"
-#include "modules/game_manager/opengl/game_manager_opengl.hpp"
+#include "modules/UserInterface/Graphical/Window.hpp"
+#include "modules/UserInterface/LifeCycle.hpp"
+#include "modules/UserInterface/Graphical/Opengl/LifeCycle.hpp"
 
-#include "modules/game_manager/opengl/extension_loader/extension_loader_glad_glfw.hpp"
-#include "modules/game_manager/opengl/extension_loader/extension_loader_glad_sdl.hpp"
+#include "modules/UserInterface/Graphical/Opengl/ExtensionLoader/Glad/Glfw/Glfw.hpp"
+#include "modules/UserInterface/Graphical/Opengl/ExtensionLoader/Glad/Sdl/GladSdl.hpp"
 
-#include "modules/game_manager/opengl/window_manager/window_manager.hpp"
-#include "modules/game_manager/opengl/window_manager/window_manager_glfw.hpp"
-#include "modules/game_manager/opengl/window_manager/window_manager_sdl.hpp"
+#include "modules/UserInterface/Graphical/Opengl/Window/Glfw/Glfw.hpp"
+#include "modules/UserInterface/Graphical/Opengl/Window/Sdl/Sdl.hpp"
 
-void prepareConfigManager()
+// replace these with builder pattern or strategy pattern
+void setupConfigurations()
 {
-	std::shared_ptr<ogl::ConfigManager> configManagerPc =
-		std::shared_ptr<ogl::ConfigManagerPc>();
+	using namespace ogl::configurations;
 
-	ogl::ConfigManagerProvider::setConfigManager(configManagerPc);
+	std::shared_ptr<Configurations> configurationsPc = std::make_shared<Pc>();
+	Provider::setProvider(configurationsPc);
 }
 
-void prepareLoggerManager()
+void setupLogger()
 {
-	std::shared_ptr<ogl::LoggerManager> loggerManagerConsole =
-		std::shared_ptr<ogl::LoggerManagerConsole>();
+	using namespace ogl::logger;
 
-	ogl::LoggerManagerProvider::setLoggerManager(loggerManagerConsole);
+	std::shared_ptr<Logger> loggerConsole = std::make_shared<console::Console>();
+	Provider::setLogger(loggerConsole);
 }
 
-void prepareGameManager()
+std::unique_ptr<ogl::userInterface::LifeCycle> game;
+
+void setupGame()
 {
-	// replace these with builder pattern or strategy pattern
-	std::shared_ptr<IExtensionLoader> extensionLoaderGladSDL =
-		std::make_shared<ExtensionLoaderGladSdl>();
+	//using namespace ogl::userInterface::graphical;
+	//using namespace ogl::userInterface::graphical::opengl::extensionLoader;
 
-	std::shared_ptr<IExtensionLoader> extensionLoaderGladGlfw =
-		std::make_shared<ExtensionLoaderGladGlfw>();
+	std::shared_ptr<ExtensionLoader> extensionLoader = std::make_shared<glad::sdl::Sdl>();
+	//std::shared_ptr<ExtensionLoader> extensionLoaderGladGlfw = std::make_shared<glad::glfw::Glfw>();
 
-	std::shared_ptr<IWindowManager> windowManagerSDL =
-		std::make_shared<WindowManagerSDL>();
+	std::shared_ptr<ogl::userInterface::graphical::Window> window
+		= std::make_shared<ogl::userInterface::graphical::Sdl>();
+	game = std::make_unique<ogl::userInterface::graphical::opengl::LifeCycle>(extensionLoader, window);
+}
 
-	std::unique_ptr<GameManager> gameManagerOpenGL =
-		std::make_unique<GameManagerOpenGL>(extensionLoaderGladGlfw, windowManagerSDL);
-
-	gameManagerOpenGL->run();
+void runGame() {
+	game->run();
 }
 
 int main(int argc, char* args[])
 {
-	prepareConfigManager();
-	prepareLoggerManager();
-	prepareGameManager();
+	setupConfigurations();
+	setupLogger();
+	setupGame();
+	runGame();
+
 	return 0;
 }
